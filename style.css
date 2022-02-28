@@ -1,0 +1,48 @@
+body{
+    margin: 0 auto;
+  max-width: 1000px;
+  font-family: Courier;
+    background-color: blanchedalmond;
+    color: brown;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+#filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    margin-bottom: 15px;
+    gap: 15px;
+  }
+
+  
+  
+#add-song {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 100px 60px;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #aaa;
+  }
+
+  #filter-by-song,
+  #filter-by-artist,
+  #filter-by-releaseYear,
+  #filter-by-genre  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+
+#header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #aaa;
+    background: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
