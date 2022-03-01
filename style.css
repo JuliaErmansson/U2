@@ -53,6 +53,25 @@ button{
     border-bottom: 1px solid #aaa;
     background: whitesmoke;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     border-radius: 20px;
   }
+
+.song{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 20px;
+
+    
+}
+
+ol{
+    padding: 0;
+}
+
+.song:nth-last-child(odd){
+    background-color: beige;
+}
+
+
+
