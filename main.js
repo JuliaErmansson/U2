@@ -10,19 +10,14 @@ function createNewSong(songName, artist, releaseYear, genre){
     return song;
 }
 
-function addNewSongToDatabase(song, database){
+function addNewSongToDatabase(database, song){
     database.push(song); 
-  /* let x = document.forms["add-song"].value;
-   if(x == ""){
-        alert("You have to fill in the filters");
-        return false
-   }*/
 }
 
 function removeSongById(songs, id){
     for (let i = 0; i < songs.length; i++){
         let song = songs[i];
-
+        
         if(song.id == id){
             songs.splice(i, 1);
             return;
@@ -35,40 +30,44 @@ function getSongsByName(songs, name){
     let songsByName = [];
 
     for (let song of songs){
-        if (songs.name.toLowerCase() == name.toLowerCase()){
+        if (song.name.toLowerCase() == name.toLowerCase()){
             songsByName.push(song)
         }
     }
+    return songsByName
 }
 
 function getSongsByArtist(songs, artist){
     let songsByArtist = [];
 
     for (let song of songs){
-        if (songs.artist.toLowerCase() == artist.toLowerCase()){
+        if (song.artist.toLowerCase() == artist.toLowerCase()){
             songsByArtist.push(song)
         }
     }
+    return songsByArtist
 }
 
 function getSongsByReleaseYear(songs, releaseYear){
     let songsByReleaseYear = [];
 
     for (let song of songs){
-        if (songs.releaseYear == releaseYear){
+        if (song.releaseYear == releaseYear){
             songsByReleaseYear.push(song)
         }
     }
+    return songsByReleaseYear
 }
 
 function getSongsByGenre(songs, genre){
     let songsByGenre = [];
 
     for (let song of songs){
-        if (songs.genre.toLowerCase() == genre.toLowerCase()){
+        if (song.genre.toLowerCase() == genre.toLowerCase()){
             songsByGenre.push(song)
         }
     }
+    return songsByGenre
 }
 
 function renderSong(song){
@@ -76,7 +75,7 @@ function renderSong(song){
     div.classList.add("song");
     div.id = song.id;
     div.innerHTML = `
-    <div>${song.id}</div>
+    <li></li>
     <div>${song.song}</div>
     <div>${song.artist}</div>
     <div>${song.releaseYear}</div>
@@ -138,15 +137,24 @@ function addSongHandler(){
 function removeSongClick(event){
     let button = event.target;
     let id = button.parentElement.id;
-    removeSongById(database, id);
+    let sure = confirm("Are you sure that you want to remove this song?")
+    if(sure){
+        removeSongById(database, id);
+        alert("the song was removed")
+    }
+    else{
+        alert("the song was not removed")
+    }
+    
     renderSongs(database);
+    
 }
 
 function setRemoveSongHandlers(){
     let buttons = document.querySelectorAll("#remove");
 
     for( let button of buttons){
-        button.addEventListener("click", removeSongClick);
+        button.addEventListener("click", removeSongClick); 
     }
 }
 
