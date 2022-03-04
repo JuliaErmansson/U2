@@ -30,7 +30,7 @@ function getSongsByName(songs, name){
     let songsByName = [];
 
     for (let song of songs){
-        if (song.name.toLowerCase() == name.toLowerCase()){
+        if (song.song.toLowerCase() == name.toLowerCase()){
             songsByName.push(song)
         }
     }
@@ -213,7 +213,7 @@ function filterSongHandlers(){
     artistForm.addEventListener("submit", filterByArtistSubmit);
     releaseForm.addEventListener("submit", filterByReleaseYearSubmit);
     genreForm.addEventListener("submit", filterByGenreSubmit);
-    showAll.addEventListener("submit", showAllClick)
+    showAll.addEventListener("click", showAllClick)
 }
 
 
