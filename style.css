@@ -1,77 +1,69 @@
-body{
-    margin: 0 auto;
+body {
+  margin: 0 auto;
   max-width: 1000px;
-    background-color: blanchedalmond;
-    color: brown;
-    
+  background-color: blanchedalmond;
+  color: brown;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
 #filter {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    margin-bottom: 15px;
-    gap: 15px;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 15px;
+  gap: 15px;
+}
 
-  
-  
 #add-song {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 100px 60px;
-    gap: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #aaa;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 100px 60px;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #aaa;
+}
 
-  #filter-by-song,
-  #filter-by-artist,
-  #filter-by-releaseYear,
-  #filter-by-genre  {
+#filter-by-song,
+#filter-by-artist,
+#filter-by-releaseYear,
+#filter-by-genre {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
 }
 
-button{
-    color: azure;
-    background-color: brown;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 20px;
+button {
+  color: azure;
+  background-color: brown;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 20px;
 }
 
-#show-all{
-    width: 100px;
+#show-all {
+  width: 100px;
 }
 
 #header {
-    padding: 10px 20px;
-    border-bottom: 1px solid #aaa;
-    background: whitesmoke;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    border-radius: 20px;
-  }
-
-.song{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin: 20px;
-
-    
+  padding: 10px 20px;
+  border-bottom: 1px solid #aaa;
+  background: whitesmoke;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-radius: 20px;
 }
 
-ol{
-    padding: 0;
+.song {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 20px;
 }
 
-.song:nth-last-child(odd){
-    background-color: beige;
+ol {
+  padding: 0;
 }
 
-
-
+.song:nth-last-child(odd) {
+  background-color: beige;
+}

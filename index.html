@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <h1>What song are you looking for?</h1> 
+    <h1>What song are you looking for?</h1>
 
-    <form id = "add-song">
+    <form id="add-song">
         <input id="song" type="text" placeholder="Song">
         <input id="artist" type="text" placeholder="Artist">
         <input id="releaseYear" type="text" placeholder="Release Year">
@@ -20,38 +20,38 @@
         <button>Add</button>
     </form>
 
-    <div id = "filter">
-        <form id ="filter-by-song">
-            <input id ="filter-song" type="text" placeholder="Filter by Song">
+    <div id="filter">
+        <form id="filter-by-song">
+            <input id="filter-song" type="text" placeholder="Filter by Song">
             <button>Filter</button>
         </form>
-   
-    <form id ="filter-by-artist">
-        <input id ="filter-artist" type="text" placeholder="Filter by Artist">
-        <button>Filter</button>
-    </form>
 
-    <form id ="filter-by-releaseYear">
-        <input id ="filter-release" type="text" placeholder="Filter by Release Year">
-        <button>Filter</button>
-    </form>
+        <form id="filter-by-artist">
+            <input id="filter-artist" type="text" placeholder="Filter by Artist">
+            <button>Filter</button>
+        </form>
 
-    <form id ="filter-by-genre">
-        <input id ="filter-genre" type="text" placeholder="Filter by Genre">
-        <button>Filter</button>
-    </form>
-    <button id="show-all" type="button">Show all</button>
-     </div>
+        <form id="filter-by-releaseYear">
+            <input id="filter-release" type="text" placeholder="Filter by Release Year">
+            <button>Filter</button>
+        </form>
 
-     <div id="header">
-         <div></div>
-         <div>Song</div>
-         <div>Artist</div>
-         <div>Release Year</div>
-         <div>Genre</div>
-     </div>
+        <form id="filter-by-genre">
+            <input id="filter-genre" type="text" placeholder="Filter by Genre">
+            <button>Filter</button>
+        </form>
+        <button id="show-all" type="button">Show all</button>
+    </div>
 
-     <ol type="1" id ="songs"></ol>
+    <div id="header">
+        <div></div>
+        <div>Song</div>
+        <div>Artist</div>
+        <div>Release Year</div>
+        <div>Genre</div>
+    </div>
+
+    <ol type="1" id="songs"></ol>
 
     <script src="database.js"></script>
     <script src="main.js"></script>
